@@ -1,1 +1,1 @@
-# otus_10
+# Demo website for online courses
