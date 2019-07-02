@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 
 
 class TeacherSerializer(serializers.ModelSerializer):
+    user = serializers.ReadOnlyField(source='user.username')
     class Meta:
         model = Teacher
         fields = '__all__'
