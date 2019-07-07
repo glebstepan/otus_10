@@ -37,3 +37,13 @@ class Profile(models.Model):
 
     def __str__(self):
         return f"{self.student} > {self.course}"
+
+
+class Notification(models.Model):
+    user_email = models.CharField(max_length=100)
+    email_content = models.TextField(blank=True, null=True)
+    is_send = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"{self.user_email} ({self.email_content[:100]}): {self.is_send}"
+

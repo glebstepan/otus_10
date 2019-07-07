@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Course, Teacher, Lesson, Profile
+from .models import Course, Teacher, Lesson, Profile, Notification
 
 # Register your models here.
 
@@ -18,4 +18,8 @@ class LessonAdmin(admin.ModelAdmin):
 
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(Notification)
+class NotificationAdmin(admin.ModelAdmin):
     pass
