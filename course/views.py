@@ -5,3 +5,8 @@ from django.views.generic.list import ListView
 class CourseListView(ListView):
 
     model = Course
+
+
+class LessonListView(ListView):
+
+    model = Lesson

@@ -1,6 +1,14 @@
 {% extends 'course/base.html' %}
 
+
 {% block content %}
+ <div  onclick="func()" class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 font-italic">Добро пожаловать на сайт с онлайн-курсами для программистов!</h1>
+      <div class="lead my-3">Авторские онлайн‑курсы для программистов любого уровня: и профессионалы, и новички найдут тут все, что ишут.</div>
+      <div class="lead mb-0"><a href="#" class="text-white font-weight-bold">Подробнее...</a></div>
+    </div>
+  </div>
 <div class="row mb-2">
 
 {% for course in object_list %}

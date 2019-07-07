@@ -24,6 +24,12 @@ class Lesson(models.Model):
     name = models.CharField(max_length=50)
     start_time = models.DateTimeField(blank=True, null=True)
 
+    def __str__(self):
+        return f"{self.name} ({self.course}): {self.start_time}"
+
+    class Meta:
+        ordering = ('start_time',)
+
 
 class Profile(models.Model):
     student = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
