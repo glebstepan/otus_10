@@ -39,7 +39,7 @@ const config = {
         port: '3001',
         host: '127.0.0.1',
         proxy: {
-            '/api': 'http://127.0.0.1:8000/course/api/'
+            '/': 'http://127.0.0.1:8000/'
         }
     },
     module: {
@@ -53,11 +53,6 @@ const config = {
                         presets: ['@babel/preset-env']
                     }
                 }
-            },
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: ['eslint-loader']
             },
             {
                 test: /\.(scss|css)$/,

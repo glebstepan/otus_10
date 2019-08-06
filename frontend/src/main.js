@@ -5,7 +5,7 @@ import '@/assets/css/app.scss'
 import 'bootstrap/dist/js/bootstrap.bundle.min'
 
 // Load project image
-import projectImage from '@/assets/images/mws-profile.png'
+// import projectImage from '@/assets/images/mws-profile.png'
 
 // // Let's append the image to the page
 // const main = document.getElementById('app')
@@ -39,5 +39,17 @@ import projectImage from '@/assets/images/mws-profile.png'
 // const link = document.createElement('a')
 // link.setAttribute('href', 'https://github.com/johndatserakis/modern-webpack-starter')
 // link.innerHTML = 'View on GitHub'
-// div.appendChild(link)
-// main.appendChild(div)
+// div.appendChild(
+
+const url = 'http://127.0.0.1:3001/course/api/?format=json'
+
+$(document).ready(function () {
+
+    $.get(url, function (courses, status) {
+        courses.forEach(function (course) {
+            console.log(course);
+            $('#app').append('<div>' + course.title + ' <br>' + course.description + '</div>');
+        })
+
+    });
+});

@@ -24,4 +24,5 @@ urlpatterns = [
     path('course/', include('course.urls')),
     path('time-table/', LessonListView.as_view(), name='time_table'),
     path('django-rq/', include('django_rq.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
